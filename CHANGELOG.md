@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.2.1-beta (2025-07-12)
+
+Full Changelog: [v0.1.2-beta...v0.2.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.1.2-beta...v0.2.1-beta)
+
+### Features
+
+* **api:** update via SDK Studio ([8337daa](https://github.com/andreibesleaga/ocpi-sdk/commit/8337daa10db2f9b996ec341a9ec06ecddd507b83))
+
+
+### Chores
+
+* remove custom code ([d3ab427](https://github.com/andreibesleaga/ocpi-sdk/commit/d3ab4274ba08659c96b8a7ccd8584794a946c5a1))
+* update SDK settings ([1effa34](https://github.com/andreibesleaga/ocpi-sdk/commit/1effa347a28f3b88eb35c2dfbb831b665ac9d288))
+* update SDK settings ([52afde1](https://github.com/andreibesleaga/ocpi-sdk/commit/52afde1eba4c219b1ac06b4d2a4704aea3eb3648))
+
 ## 0.1.2-beta (2025-07-12)
 
 Full Changelog: [v0.1.1-beta...v0.1.2-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.1.1-beta...v0.1.2-beta)
