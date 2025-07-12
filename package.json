@@ -1,6 +1,6 @@
 {
   "name": "ocpi-sdk",
-  "version": "0.1.1-beta",
+  "version": "0.1.2-beta",
   "description": "The official TypeScript library for the Ocpi SDK API",
   "author": "Ocpi SDK <>",
   "types": "dist/index.d.ts",
