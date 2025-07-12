@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2-beta (2025-07-12)
+
+Full Changelog: [v0.1.1-beta...v0.1.2-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.1.1-beta...v0.1.2-beta)
+
 ## 0.1.1-beta (2025-07-11)
 
 Full Changelog: [v0.1.0-beta...v0.1.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.1.0-beta...v0.1.1-beta)
