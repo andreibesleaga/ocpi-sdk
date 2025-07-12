@@ -1,8 +1,12 @@
-# Ocpi SDK TypeScript API Library
+# OCPI SDK TypeScript API Library
 
 [![NPM version](<https://img.shields.io/npm/v/ocpi-sdk.svg?label=npm%20(stable)>)](https://npmjs.org/package/ocpi-sdk) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/ocpi-sdk)
 
-This library provides convenient access to the Ocpi SDK REST API from server-side TypeScript or JavaScript.
+This library provides convenient access to the OCPI SDK REST API from server-side TypeScript or JavaScript.
+
+OCPI SDK & AI MCP Server Implementation for EV Charging Open Charge Point Interface
+
+The library contains a packages/mcp-server for OCM MCP AI communication server.
 
 The full API of this library can be found in [api.md](api.md).
 
