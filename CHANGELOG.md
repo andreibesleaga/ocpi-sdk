@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.2-beta (2025-07-12)
+
+Full Changelog: [v0.2.1-beta...v0.2.2-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.1-beta...v0.2.2-beta)
+
+### Chores
+
+* configure new SDK language ([ca2cbc5](https://github.com/andreibesleaga/ocpi-sdk/commit/ca2cbc55e411bc832d4a6625c3bb4b1427aa95e1))
+
 ## 0.2.1-beta (2025-07-12)
 
 Full Changelog: [v0.1.2-beta...v0.2.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.1.2-beta...v0.2.1-beta)
