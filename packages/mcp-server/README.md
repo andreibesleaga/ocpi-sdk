@@ -1,4 +1,6 @@
-# Ocpi SDK TypeScript MCP Server
+# OCPI SDK TypeScript MCP Server
+
+A Model Context Protocol (MCP) server implementation for OCPI (Open Charging Point Interface) services, enabling AI assistants to interact with EV charging infrastructure.
 
 It is generated with [Stainless](https://www.stainless.com/).
 
