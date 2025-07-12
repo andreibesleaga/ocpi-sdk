@@ -83,7 +83,7 @@ export interface ActiveChargingProfile {
 export interface ChargingProfile {
   charging_rate_unit: 'W' | 'A';
 
-  charging_profile_period?: Array<ChargingProfile.ChargingProfilePeriod>;
+  charging_profile_period?: Array<ChargingProfilePeriod>;
 
   duration?: number;
 
@@ -92,12 +92,10 @@ export interface ChargingProfile {
   start_date_time?: string;
 }
 
-export namespace ChargingProfile {
-  export interface ChargingProfilePeriod {
-    limit: number;
+export interface ChargingProfilePeriod {
+  limit: number;
 
-    start_period: number;
-  }
+  start_period: number;
 }
 
 export interface ChargingprofileUpdateParams {
@@ -188,6 +186,7 @@ export declare namespace Chargingprofiles {
   export {
     type ActiveChargingProfile as ActiveChargingProfile,
     type ChargingProfile as ChargingProfile,
+    type ChargingProfilePeriod as ChargingProfilePeriod,
     type ChargingprofileUpdateParams as ChargingprofileUpdateParams,
     type ChargingprofileCreateResultParams as ChargingprofileCreateResultParams,
   };

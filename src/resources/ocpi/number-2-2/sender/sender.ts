@@ -5,6 +5,7 @@ import * as ChargingprofilesAPI from './chargingprofiles';
 import {
   ActiveChargingProfile,
   ChargingProfile,
+  ChargingProfilePeriod,
   ChargingprofileCreateResultParams,
   ChargingprofileUpdateParams,
   Chargingprofiles,
@@ -23,6 +24,7 @@ export declare namespace Sender {
     Chargingprofiles as Chargingprofiles,
     type ActiveChargingProfile as ActiveChargingProfile,
     type ChargingProfile as ChargingProfile,
+    type ChargingProfilePeriod as ChargingProfilePeriod,
     type ChargingprofileUpdateParams as ChargingprofileUpdateParams,
     type ChargingprofileCreateResultParams as ChargingprofileCreateResultParams,
   };

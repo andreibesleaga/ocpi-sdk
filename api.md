@@ -18,6 +18,7 @@ Types:
 
 - <code><a href="./src/resources/ocpi/number-2-2/sender/chargingprofiles.ts">ActiveChargingProfile</a></code>
 - <code><a href="./src/resources/ocpi/number-2-2/sender/chargingprofiles.ts">ChargingProfile</a></code>
+- <code><a href="./src/resources/ocpi/number-2-2/sender/chargingprofiles.ts">ChargingProfilePeriod</a></code>
 
 Methods:
 
@@ -70,8 +71,10 @@ Methods:
 
 Methods:
 
-- <code title="get /ocpi/sender/2.2/locations/{locationID}/{evseUID}/{connectorID}">client.ocpi.sender.number2_2.locations.<a href="./src/resources/ocpi/sender/number-2-2/locations.ts">retrieve</a>(connectorID, { ...params }) -> Response</code>
+- <code title="get /ocpi/sender/2.2/locations/{locationID}">client.ocpi.sender.number2_2.locations.<a href="./src/resources/ocpi/sender/number-2-2/locations.ts">retrieve</a>(locationID, { ...params }) -> Response</code>
 - <code title="get /ocpi/sender/2.2/locations">client.ocpi.sender.number2_2.locations.<a href="./src/resources/ocpi/sender/number-2-2/locations.ts">list</a>({ ...params }) -> Response</code>
+- <code title="get /ocpi/sender/2.2/locations/{locationID}/{evseUID}">client.ocpi.sender.number2_2.locations.<a href="./src/resources/ocpi/sender/number-2-2/locations.ts">retrieveEvse</a>(evseUid, { ...params }) -> Response</code>
+- <code title="get /ocpi/sender/2.2/locations/page/{uid}">client.ocpi.sender.number2_2.locations.<a href="./src/resources/ocpi/sender/number-2-2/locations.ts">retrievePage</a>(uid, { ...params }) -> Response</code>
 
 #### Sessions
 
@@ -130,6 +133,8 @@ Types:
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">BusinessDetails</a></code>
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">Connector</a></code>
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">EnergyMix</a></code>
+- <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">EnergySource</a></code>
+- <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">EnvironmentalImpact</a></code>
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">Evse</a></code>
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">ExceptionalPeriod</a></code>
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">GeoLocation</a></code>
@@ -137,15 +142,20 @@ Types:
 
 Methods:
 
-- <code title="get /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}/{connectorID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">retrieve</a>(connectorID, { ...params }) -> Response</code>
-- <code title="patch /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}/{connectorID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">update</a>(connectorID, { ...params }) -> Response</code>
+- <code title="get /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">retrieve</a>(locationID, { ...params }) -> Response</code>
+- <code title="put /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">update</a>(locationID, { ...params }) -> Response</code>
+- <code title="patch /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">modify</a>(locationID, { ...params }) -> Response</code>
+- <code title="patch /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">modifyEvse</a>(evseUid, { ...params }) -> Response</code>
+- <code title="get /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">retrieveEvse</a>(evseUid, { ...params }) -> Response</code>
+- <code title="put /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}/{connectorID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">updateConnector</a>(connectorID, { ...params }) -> Response</code>
+- <code title="put /ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}">client.ocpi.receiver.number2_2.locations.<a href="./src/resources/ocpi/receiver/number-2-2/locations.ts">updateEvse</a>(evseUid, { ...params }) -> Response</code>
 
 #### Sessions
 
 Methods:
 
 - <code title="get /ocpi/receiver/2.2/sessions/{countryCode}/{partyID}/{sessionID}">client.ocpi.receiver.number2_2.sessions.<a href="./src/resources/ocpi/receiver/number-2-2/sessions.ts">retrieve</a>(sessionID, { ...params }) -> Response</code>
-- <code title="patch /ocpi/receiver/2.2/sessions/{countryCode}/{partyID}/{sessionID}">client.ocpi.receiver.number2_2.sessions.<a href="./src/resources/ocpi/receiver/number-2-2/sessions.ts">update</a>(sessionID, { ...params }) -> Response</code>
+- <code title="put /ocpi/receiver/2.2/sessions/{countryCode}/{partyID}/{sessionID}">client.ocpi.receiver.number2_2.sessions.<a href="./src/resources/ocpi/receiver/number-2-2/sessions.ts">update</a>(sessionID, { ...params }) -> Response</code>
 
 #### Tariffs
 
@@ -163,9 +173,10 @@ Methods:
 
 Types:
 
+- <code><a href="./src/resources/ocpi/receiver/number-2-2/tokens.ts">EnergyContract</a></code>
 - <code><a href="./src/resources/ocpi/receiver/number-2-2/tokens.ts">Token</a></code>
 
 Methods:
 
 - <code title="get /ocpi/receiver/2.2/tokens/{countryCode}/{partyID}/{tokenUID}">client.ocpi.receiver.number2_2.tokens.<a href="./src/resources/ocpi/receiver/number-2-2/tokens.ts">retrieve</a>(tokenUid, { ...params }) -> Response</code>
-- <code title="patch /ocpi/receiver/2.2/tokens/{countryCode}/{partyID}/{tokenUID}">client.ocpi.receiver.number2_2.tokens.<a href="./src/resources/ocpi/receiver/number-2-2/tokens.ts">update</a>(tokenUid, { ...params }) -> Response</code>
+- <code title="put /ocpi/receiver/2.2/tokens/{countryCode}/{partyID}/{tokenUID}">client.ocpi.receiver.number2_2.tokens.<a href="./src/resources/ocpi/receiver/number-2-2/tokens.ts">update</a>(tokenUid, { ...params }) -> Response</code>

@@ -21,12 +21,19 @@ export {
   type BusinessDetails,
   type Connector,
   type EnergyMix,
+  type EnergySource,
+  type EnvironmentalImpact,
   type Evse,
   type ExceptionalPeriod,
   type GeoLocation,
   type Image,
   type LocationRetrieveParams,
   type LocationUpdateParams,
+  type LocationModifyParams,
+  type LocationModifyEvseParams,
+  type LocationRetrieveEvseParams,
+  type LocationUpdateConnectorParams,
+  type LocationUpdateEvseParams,
 } from './locations';
 export { Number2_2 } from './number-2-2';
 export { Sessions, type SessionRetrieveParams, type SessionUpdateParams } from './sessions';
@@ -37,4 +44,10 @@ export {
   type TariffUpdateParams,
   type TariffDeleteParams,
 } from './tariffs';
-export { Tokens, type Token, type TokenRetrieveParams, type TokenUpdateParams } from './tokens';
+export {
+  Tokens,
+  type EnergyContract,
+  type Token,
+  type TokenRetrieveParams,
+  type TokenUpdateParams,
+} from './tokens';

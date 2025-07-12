@@ -4,6 +4,7 @@ export {
   Chargingprofiles,
   type ActiveChargingProfile,
   type ChargingProfile,
+  type ChargingProfilePeriod,
   type ChargingprofileUpdateParams,
   type ChargingprofileCreateResultParams,
 } from './chargingprofiles';

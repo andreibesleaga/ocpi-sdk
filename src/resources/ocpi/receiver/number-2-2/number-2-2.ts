@@ -17,11 +17,18 @@ import {
   BusinessDetails,
   Connector,
   EnergyMix,
+  EnergySource,
+  EnvironmentalImpact,
   Evse,
   ExceptionalPeriod,
   GeoLocation,
   Image,
+  LocationModifyEvseParams,
+  LocationModifyParams,
+  LocationRetrieveEvseParams,
   LocationRetrieveParams,
+  LocationUpdateConnectorParams,
+  LocationUpdateEvseParams,
   LocationUpdateParams,
   Locations,
 } from './locations';
@@ -30,7 +37,7 @@ import { SessionRetrieveParams, SessionUpdateParams, Sessions } from './sessions
 import * as TariffsAPI from './tariffs';
 import { Tariff, TariffDeleteParams, TariffRetrieveParams, TariffUpdateParams, Tariffs } from './tariffs';
 import * as TokensAPI from './tokens';
-import { Token, TokenRetrieveParams, TokenUpdateParams, Tokens } from './tokens';
+import { EnergyContract, Token, TokenRetrieveParams, TokenUpdateParams, Tokens } from './tokens';
 
 export class Number2_2 extends APIResource {
   cdrs: CdrsAPI.Cdrs = new CdrsAPI.Cdrs(this._client);
@@ -72,12 +79,19 @@ export declare namespace Number2_2 {
     type BusinessDetails as BusinessDetails,
     type Connector as Connector,
     type EnergyMix as EnergyMix,
+    type EnergySource as EnergySource,
+    type EnvironmentalImpact as EnvironmentalImpact,
     type Evse as Evse,
     type ExceptionalPeriod as ExceptionalPeriod,
     type GeoLocation as GeoLocation,
     type Image as Image,
     type LocationRetrieveParams as LocationRetrieveParams,
     type LocationUpdateParams as LocationUpdateParams,
+    type LocationModifyParams as LocationModifyParams,
+    type LocationModifyEvseParams as LocationModifyEvseParams,
+    type LocationRetrieveEvseParams as LocationRetrieveEvseParams,
+    type LocationUpdateConnectorParams as LocationUpdateConnectorParams,
+    type LocationUpdateEvseParams as LocationUpdateEvseParams,
   };
 
   export {
@@ -96,6 +110,7 @@ export declare namespace Number2_2 {
 
   export {
     Tokens as Tokens,
+    type EnergyContract as EnergyContract,
     type Token as Token,
     type TokenRetrieveParams as TokenRetrieveParams,
     type TokenUpdateParams as TokenUpdateParams,
