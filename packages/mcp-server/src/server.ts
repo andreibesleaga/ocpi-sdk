@@ -26,7 +26,7 @@ export { endpoints } from './tools';
 export const server = new McpServer(
   {
     name: 'ocpi_sdk_api',
-    version: '0.2.2-beta',
+    version: '0.2.3-beta',
   },
   {
     capabilities: {
