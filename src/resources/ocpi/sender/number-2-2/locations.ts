@@ -8,11 +8,13 @@ import { path } from '../../../../internal/utils/path';
 
 export class Locations extends APIResource {
   retrieve(
-    locationID: string,
+    connectorID: string,
     params: LocationRetrieveParams,
     options?: RequestOptions,
   ): APIPromise<Response> {
     const {
+      locationID,
+      evseUID,
       'OCPI-from-country-code': ocpiFromCountryCode,
       'OCPI-from-party-id': ocpiFromPartyID,
       'OCPI-to-country-code': ocpiToCountryCode,
@@ -20,7 +22,7 @@ export class Locations extends APIResource {
       'X-Correlation-ID': xCorrelationID,
       'X-Request-ID': xRequestID,
     } = params;
-    return this._client.get(path`/ocpi/sender/2.2/locations/${locationID}`, {
+    return this._client.get(path`/ocpi/sender/2.2/locations/${locationID}/${evseUID}/${connectorID}`, {
       ...options,
       headers: buildHeaders([
         {
@@ -132,16 +134,44 @@ export class Locations extends APIResource {
 }
 
 export interface LocationRetrieveParams {
+  /**
+   * Path param:
+   */
+  locationID: string;
+
+  /**
+   * Path param:
+   */
+  evseUID: string;
+
+  /**
+   * Header param:
+   */
   'OCPI-from-country-code': string;
 
+  /**
+   * Header param:
+   */
   'OCPI-from-party-id': string;
 
+  /**
+   * Header param:
+   */
   'OCPI-to-country-code': string;
 
+  /**
+   * Header param:
+   */
   'OCPI-to-party-id': string;
 
+  /**
+   * Header param:
+   */
   'X-Correlation-ID': string;
 
+  /**
+   * Header param:
+   */
   'X-Request-ID': string;
 }
 

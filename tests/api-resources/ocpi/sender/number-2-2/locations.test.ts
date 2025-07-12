@@ -10,7 +10,9 @@ const client = new OcpiSDK({
 describe('resource locations', () => {
   // skipped: tests are disabled for the time being
   test.skip('retrieve: required and optional params', async () => {
-    const response = await client.ocpi.sender.number2_2.locations.retrieve('locationID', {
+    const response = await client.ocpi.sender.number2_2.locations.retrieve('connectorID', {
+      locationID: 'locationID',
+      evseUID: 'evseUID',
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
       'OCPI-to-country-code': 'OCPI-to-country-code',
