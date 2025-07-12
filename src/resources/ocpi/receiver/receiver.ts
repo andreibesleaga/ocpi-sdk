@@ -1,15 +1,15 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../../core/resource';
-import * as Number2_2API from './number-2-2/number-2-2';
-import { Number2_2 } from './number-2-2/number-2-2';
+import * as V22API from './v22/v22';
+import { V22 } from './v22/v22';
 
 export class Receiver extends APIResource {
-  number2_2: Number2_2API.Number2_2 = new Number2_2API.Number2_2(this._client);
+  v22: V22API.V22 = new V22API.V22(this._client);
 }
 
-Receiver.Number2_2 = Number2_2;
+Receiver.V22 = V22;
 
 export declare namespace Receiver {
-  export { Number2_2 as Number2_2 };
+  export { V22 as V22 };
 }

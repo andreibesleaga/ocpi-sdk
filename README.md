@@ -29,9 +29,9 @@ const client = new OcpiSDK({
   apiKey: process.env['OCPI_SDK_API_KEY'], // This is the default and can be omitted
 });
 
-const number2_2 = await client.ocpi.number2_2.retrieve();
+const v22 = await client.ocpi.v22.retrieve();
 
-const content = await number2_2.blob();
+const content = await v22.blob();
 console.log(content);
 ```
 
@@ -47,7 +47,7 @@ const client = new OcpiSDK({
   apiKey: process.env['OCPI_SDK_API_KEY'], // This is the default and can be omitted
 });
 
-const number2_2: Response = await client.ocpi.number2_2.retrieve();
+const v22: Response = await client.ocpi.v22.retrieve();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -60,7 +60,7 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-const number2_2 = await client.ocpi.number2_2.retrieve().catch(async (err) => {
+const v22 = await client.ocpi.v22.retrieve().catch(async (err) => {
   if (err instanceof OcpiSDK.APIError) {
     console.log(err.status); // 400
     console.log(err.name); // BadRequestError
@@ -100,7 +100,7 @@ const client = new OcpiSDK({
 });
 
 // Or, configure per-request:
-await client.ocpi.number2_2.retrieve({
+await client.ocpi.v22.retrieve({
   maxRetries: 5,
 });
 ```
@@ -117,7 +117,7 @@ const client = new OcpiSDK({
 });
 
 // Override per-request:
-await client.ocpi.number2_2.retrieve({
+await client.ocpi.v22.retrieve({
   timeout: 5 * 1000,
 });
 ```
@@ -140,13 +140,13 @@ Unlike `.asResponse()` this method consumes the body, returning once it is parse
 ```ts
 const client = new OcpiSDK();
 
-const response = await client.ocpi.number2_2.retrieve().asResponse();
+const response = await client.ocpi.v22.retrieve().asResponse();
 console.log(response.headers.get('X-My-Header'));
 console.log(response.statusText); // access the underlying Response object
 
-const { data: number2_2, response: raw } = await client.ocpi.number2_2.retrieve().withResponse();
+const { data: v22, response: raw } = await client.ocpi.v22.retrieve().withResponse();
 console.log(raw.headers.get('X-My-Header'));
-console.log(number2_2);
+console.log(v22);
 ```
 
 ### Logging
@@ -226,7 +226,7 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.ocpi.number2_2.retrieve({
+client.ocpi.v22.retrieve({
   // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
