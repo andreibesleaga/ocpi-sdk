@@ -6,7 +6,7 @@ This library provides convenient access to the OCPI SDK REST API from server-sid
 
 OCPI SDK & AI MCP Server Implementation for EV Charging Open Charge Point Interface
 
-The library contains a packages/mcp-server for OCM MCP AI communication server.
+The library contains a packages/mcp-server for OCPI MCP AI communication server.
 
 The full API of this library can be found in [api.md](api.md).
 
