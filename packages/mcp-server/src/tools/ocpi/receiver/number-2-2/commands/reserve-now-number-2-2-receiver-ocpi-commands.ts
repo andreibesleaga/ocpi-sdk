@@ -106,16 +106,7 @@ export const tool: Tool = {
             enum: ['CHEAP', 'FAST', 'GREEN', 'REGULAR'],
           },
           energy_contract: {
-            type: 'object',
-            properties: {
-              supplier_name: {
-                type: 'string',
-              },
-              contract_id: {
-                type: 'string',
-              },
-            },
-            required: ['supplier_name'],
+            $ref: '#/$defs/energy_contract',
           },
           group_id: {
             type: 'string',
@@ -138,6 +129,18 @@ export const tool: Tool = {
           'valid',
           'whitelist',
         ],
+      },
+      energy_contract: {
+        type: 'object',
+        properties: {
+          supplier_name: {
+            type: 'string',
+          },
+          contract_id: {
+            type: 'string',
+          },
+        },
+        required: ['supplier_name'],
       },
     },
   },

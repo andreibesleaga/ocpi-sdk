@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   resource: 'ocpi.receiver.number_2_2.tokens',
   operation: 'write',
   tags: [],
-  httpMethod: 'patch',
+  httpMethod: 'put',
   httpPath: '/ocpi/receiver/2.2/tokens/{countryCode}/{partyID}/{tokenUID}',
-  operationId: 'patchClientOwnedToken',
+  operationId: 'putClientOwnedToken',
 };
 
 export const tool: Tool = {
@@ -31,8 +31,34 @@ export const tool: Tool = {
       tokenUID: {
         type: 'string',
       },
-      body: {
-        type: 'object',
+      contract_id: {
+        type: 'string',
+      },
+      country_code: {
+        type: 'string',
+      },
+      issuer: {
+        type: 'string',
+      },
+      last_updated: {
+        type: 'string',
+      },
+      party_id: {
+        type: 'string',
+      },
+      type: {
+        type: 'string',
+        enum: ['AD_HOC_USER', 'APP_USER', 'OTHER', 'RFID'],
+      },
+      uid: {
+        type: 'string',
+      },
+      valid: {
+        type: 'boolean',
+      },
+      whitelist: {
+        type: 'string',
+        enum: ['ALWAYS', 'ALLOWED', 'ALLOWED_OFFLINE', 'NEVER'],
       },
       'OCPI-from-country-code': {
         type: 'string',
@@ -52,15 +78,41 @@ export const tool: Tool = {
       'X-Request-ID': {
         type: 'string',
       },
-      type: {
+      default_profile_type: {
         type: 'string',
-        enum: ['AD_HOC_USER', 'APP_USER', 'OTHER', 'RFID'],
+        enum: ['CHEAP', 'FAST', 'GREEN', 'REGULAR'],
+      },
+      energy_contract: {
+        $ref: '#/$defs/energy_contract',
+      },
+      group_id: {
+        type: 'string',
+      },
+      language: {
+        type: 'string',
+      },
+      visual_number: {
+        type: 'string',
       },
       jq_filter: {
         type: 'string',
         title: 'jq Filter',
         description:
           'A jq filter to apply to the response to include certain fields. Consult the output schema in the tool description to see the fields that are available.\n\nFor example: to include only the `name` field in every object of a results array, you can provide ".results[].name".\n\nFor more information, see the [jq documentation](https://jqlang.org/manual/).',
+      },
+    },
+    $defs: {
+      energy_contract: {
+        type: 'object',
+        properties: {
+          supplier_name: {
+            type: 'string',
+          },
+          contract_id: {
+            type: 'string',
+          },
+        },
+        required: ['supplier_name'],
       },
     },
   },

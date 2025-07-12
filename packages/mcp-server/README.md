@@ -204,6 +204,8 @@ The following tools are available in this MCP server.
 
 - `retrieve_number_2_2_sender_ocpi_locations` (`read`):
 - `list_number_2_2_sender_ocpi_locations` (`read`):
+- `retrieve_evse_number_2_2_sender_ocpi_locations` (`read`):
+- `retrieve_page_number_2_2_sender_ocpi_locations` (`read`):
 
 ### Resource `ocpi.sender.number_2_2.sessions`:
 
@@ -239,6 +241,11 @@ The following tools are available in this MCP server.
 
 - `retrieve_number_2_2_receiver_ocpi_locations` (`read`):
 - `update_number_2_2_receiver_ocpi_locations` (`write`):
+- `modify_number_2_2_receiver_ocpi_locations` (`write`):
+- `modify_evse_number_2_2_receiver_ocpi_locations` (`write`):
+- `retrieve_evse_number_2_2_receiver_ocpi_locations` (`read`):
+- `update_connector_number_2_2_receiver_ocpi_locations` (`write`):
+- `update_evse_number_2_2_receiver_ocpi_locations` (`write`):
 
 ### Resource `ocpi.receiver.number_2_2.sessions`:
 

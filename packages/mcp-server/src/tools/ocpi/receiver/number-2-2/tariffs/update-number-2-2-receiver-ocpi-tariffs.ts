@@ -196,42 +196,13 @@ export const tool: Tool = {
           energy_sources: {
             type: 'array',
             items: {
-              type: 'object',
-              properties: {
-                percentage: {
-                  type: 'number',
-                },
-                source: {
-                  type: 'string',
-                  enum: [
-                    'NUCLEAR',
-                    'GENERAL_FOSSIL',
-                    'COAL',
-                    'GAS',
-                    'GENERAL_GREEN',
-                    'SOLAR',
-                    'WIND',
-                    'WATER',
-                  ],
-                },
-              },
-              required: ['percentage', 'source'],
+              $ref: '#/$defs/energy_source',
             },
           },
           environ_impact: {
             type: 'array',
             items: {
-              type: 'object',
-              properties: {
-                amount: {
-                  type: 'number',
-                },
-                category: {
-                  type: 'string',
-                  enum: ['NUCLEAR_WASTE', 'CARBON_DIOXIDE'],
-                },
-              },
-              required: ['amount', 'category'],
+              $ref: '#/$defs/environmental_impact',
             },
           },
           supplier_name: {
@@ -239,6 +210,32 @@ export const tool: Tool = {
           },
         },
         required: ['is_green_energy'],
+      },
+      energy_source: {
+        type: 'object',
+        properties: {
+          percentage: {
+            type: 'number',
+          },
+          source: {
+            type: 'string',
+            enum: ['NUCLEAR', 'GENERAL_FOSSIL', 'COAL', 'GAS', 'GENERAL_GREEN', 'SOLAR', 'WIND', 'WATER'],
+          },
+        },
+        required: ['percentage', 'source'],
+      },
+      environmental_impact: {
+        type: 'object',
+        properties: {
+          amount: {
+            type: 'number',
+          },
+          category: {
+            type: 'string',
+            enum: ['NUCLEAR_WASTE', 'CARBON_DIOXIDE'],
+          },
+        },
+        required: ['amount', 'category'],
       },
       price: {
         type: 'object',

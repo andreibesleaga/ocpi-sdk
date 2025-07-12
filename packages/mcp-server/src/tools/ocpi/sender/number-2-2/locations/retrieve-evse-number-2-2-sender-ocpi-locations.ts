@@ -7,28 +7,25 @@ import type { Metadata } from '../../../../';
 import OcpiSDK from 'ocpi-sdk';
 
 export const metadata: Metadata = {
-  resource: 'ocpi.number_2_2.receiver.chargingprofiles',
-  operation: 'write',
+  resource: 'ocpi.sender.number_2_2.locations',
+  operation: 'read',
   tags: [],
-  httpMethod: 'put',
-  httpPath: '/ocpi/2.2/receiver/chargingprofiles/{sessionId}',
-  operationId: 'putReceiverChargingProfile',
+  httpMethod: 'get',
+  httpPath: '/ocpi/sender/2.2/locations/{locationID}/{evseUID}',
+  operationId: 'getEvseObjectFromDataOwner',
 };
 
 export const tool: Tool = {
-  name: 'update_receiver_number_2_2_ocpi_chargingprofiles',
+  name: 'retrieve_evse_number_2_2_sender_ocpi_locations',
   description:
     "When using this tool, always use the `jq_filter` parameter to reduce the response size and improve performance.\n\nOnly omit if you're sure you don't need the data.\n\n\n\n# Response Schema\n```json\n{\n  type: 'string'\n}\n```",
   inputSchema: {
     type: 'object',
     properties: {
-      sessionId: {
+      locationID: {
         type: 'string',
       },
-      charging_profile: {
-        $ref: '#/$defs/charging_profile',
-      },
-      response_url: {
+      evseUID: {
         type: 'string',
       },
       'OCPI-from-country-code': {
@@ -56,51 +53,12 @@ export const tool: Tool = {
           'A jq filter to apply to the response to include certain fields. Consult the output schema in the tool description to see the fields that are available.\n\nFor example: to include only the `name` field in every object of a results array, you can provide ".results[].name".\n\nFor more information, see the [jq documentation](https://jqlang.org/manual/).',
       },
     },
-    $defs: {
-      charging_profile: {
-        type: 'object',
-        properties: {
-          charging_rate_unit: {
-            type: 'string',
-            enum: ['W', 'A'],
-          },
-          charging_profile_period: {
-            type: 'array',
-            items: {
-              $ref: '#/$defs/charging_profile_period',
-            },
-          },
-          duration: {
-            type: 'integer',
-          },
-          min_charging_rate: {
-            type: 'number',
-          },
-          start_date_time: {
-            type: 'string',
-          },
-        },
-        required: ['charging_rate_unit'],
-      },
-      charging_profile_period: {
-        type: 'object',
-        properties: {
-          limit: {
-            type: 'number',
-          },
-          start_period: {
-            type: 'integer',
-          },
-        },
-        required: ['limit', 'start_period'],
-      },
-    },
   },
 };
 
 export const handler = async (client: OcpiSDK, args: Record<string, unknown> | undefined) => {
-  const { sessionId, ...body } = args as any;
-  return asBinaryContentResult(await client.ocpi.number2_2.receiver.chargingprofiles.update(sessionId, body));
+  const { evseUID, ...body } = args as any;
+  return asBinaryContentResult(await client.ocpi.sender.number2_2.locations.retrieveEvse(evseUID, body));
 };
 
 export default { metadata, tool, handler };

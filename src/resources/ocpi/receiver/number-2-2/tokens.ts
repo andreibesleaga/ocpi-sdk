@@ -42,18 +42,18 @@ export class Tokens extends APIResource {
     const {
       countryCode,
       partyID,
-      body,
       'OCPI-from-country-code': ocpiFromCountryCode,
       'OCPI-from-party-id': ocpiFromPartyID,
       'OCPI-to-country-code': ocpiToCountryCode,
       'OCPI-to-party-id': ocpiToPartyID,
       'X-Correlation-ID': xCorrelationID,
       'X-Request-ID': xRequestID,
-      type,
+      query_type,
+      ...body
     } = params;
-    return this._client.patch(path`/ocpi/receiver/2.2/tokens/${countryCode}/${partyID}/${tokenUid}`, {
-      query: { type },
-      body: body,
+    return this._client.put(path`/ocpi/receiver/2.2/tokens/${countryCode}/${partyID}/${tokenUid}`, {
+      query: { type: query_type },
+      body,
       ...options,
       headers: buildHeaders([
         {
@@ -70,6 +70,12 @@ export class Tokens extends APIResource {
       __binaryResponse: true,
     });
   }
+}
+
+export interface EnergyContract {
+  supplier_name: string;
+
+  contract_id?: string;
 }
 
 export interface Token {
@@ -93,21 +99,13 @@ export interface Token {
 
   default_profile_type?: 'CHEAP' | 'FAST' | 'GREEN' | 'REGULAR';
 
-  energy_contract?: Token.EnergyContract;
+  energy_contract?: EnergyContract;
 
   group_id?: string;
 
   language?: string;
 
   visual_number?: string;
-}
-
-export namespace Token {
-  export interface EnergyContract {
-    supplier_name: string;
-
-    contract_id?: string;
-  }
 }
 
 export interface TokenRetrieveParams {
@@ -171,7 +169,47 @@ export interface TokenUpdateParams {
   /**
    * Body param:
    */
-  body: { [key: string]: unknown };
+  contract_id: string;
+
+  /**
+   * Body param:
+   */
+  country_code: string;
+
+  /**
+   * Body param:
+   */
+  issuer: string;
+
+  /**
+   * Body param:
+   */
+  last_updated: string;
+
+  /**
+   * Body param:
+   */
+  party_id: string;
+
+  /**
+   * Body param:
+   */
+  body_type: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
+
+  /**
+   * Body param:
+   */
+  uid: string;
+
+  /**
+   * Body param:
+   */
+  valid: boolean;
+
+  /**
+   * Body param:
+   */
+  whitelist: 'ALWAYS' | 'ALLOWED' | 'ALLOWED_OFFLINE' | 'NEVER';
 
   /**
    * Header param:
@@ -206,11 +244,37 @@ export interface TokenUpdateParams {
   /**
    * Query param:
    */
-  type?: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
+  query_type?: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
+
+  /**
+   * Body param:
+   */
+  default_profile_type?: 'CHEAP' | 'FAST' | 'GREEN' | 'REGULAR';
+
+  /**
+   * Body param:
+   */
+  energy_contract?: EnergyContract;
+
+  /**
+   * Body param:
+   */
+  group_id?: string;
+
+  /**
+   * Body param:
+   */
+  language?: string;
+
+  /**
+   * Body param:
+   */
+  visual_number?: string;
 }
 
 export declare namespace Tokens {
   export {
+    type EnergyContract as EnergyContract,
     type Token as Token,
     type TokenRetrieveParams as TokenRetrieveParams,
     type TokenUpdateParams as TokenUpdateParams,

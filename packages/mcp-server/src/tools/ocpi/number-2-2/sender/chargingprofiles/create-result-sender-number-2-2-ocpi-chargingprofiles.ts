@@ -80,16 +80,7 @@ export const tool: Tool = {
           charging_profile_period: {
             type: 'array',
             items: {
-              type: 'object',
-              properties: {
-                limit: {
-                  type: 'number',
-                },
-                start_period: {
-                  type: 'integer',
-                },
-              },
-              required: ['limit', 'start_period'],
+              $ref: '#/$defs/charging_profile_period',
             },
           },
           duration: {
@@ -103,6 +94,18 @@ export const tool: Tool = {
           },
         },
         required: ['charging_rate_unit'],
+      },
+      charging_profile_period: {
+        type: 'object',
+        properties: {
+          limit: {
+            type: 'number',
+          },
+          start_period: {
+            type: 'integer',
+          },
+        },
+        required: ['limit', 'start_period'],
       },
     },
   },
