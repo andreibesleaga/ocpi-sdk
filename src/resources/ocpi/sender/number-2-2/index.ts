@@ -1,13 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 export { Cdrs, type CdrRetrieveParams, type CdrListParams } from './cdrs';
-export {
-  Locations,
-  type LocationRetrieveParams,
-  type LocationListParams,
-  type LocationRetrieveEvseParams,
-  type LocationRetrievePageParams,
-} from './locations';
+export { Locations, type LocationRetrieveParams, type LocationListParams } from './locations';
 export { Number2_2, type DisplayText, type Number2_2UpdateParams } from './number-2-2';
 export {
   Sessions,

@@ -4,13 +4,7 @@ import { APIResource } from '../../../../core/resource';
 import * as CdrsAPI from './cdrs';
 import { CdrListParams, CdrRetrieveParams, Cdrs } from './cdrs';
 import * as LocationsAPI from './locations';
-import {
-  LocationListParams,
-  LocationRetrieveEvseParams,
-  LocationRetrievePageParams,
-  LocationRetrieveParams,
-  Locations,
-} from './locations';
+import { LocationListParams, LocationRetrieveParams, Locations } from './locations';
 import * as SessionsAPI from './sessions';
 import {
   SessionListParams,
@@ -142,8 +136,6 @@ export declare namespace Number2_2 {
     Locations as Locations,
     type LocationRetrieveParams as LocationRetrieveParams,
     type LocationListParams as LocationListParams,
-    type LocationRetrieveEvseParams as LocationRetrieveEvseParams,
-    type LocationRetrievePageParams as LocationRetrievePageParams,
   };
 
   export {
