@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asBinaryContentResult } from 'ocpi-sdk-mcp/tools/types';
+import { Metadata, asBinaryContentResult } from 'ocpi-sdk-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../../';
 import OcpiSDK from 'ocpi-sdk';
 
 export const metadata: Metadata = {
