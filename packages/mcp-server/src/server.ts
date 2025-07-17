@@ -28,11 +28,7 @@ export const server = new McpServer(
     name: 'ocpi_sdk_api',
     version: '0.2.4-beta',
   },
-  {
-    capabilities: {
-      tools: {},
-    },
-  },
+  { capabilities: { tools: {} } },
 );
 
 /**
