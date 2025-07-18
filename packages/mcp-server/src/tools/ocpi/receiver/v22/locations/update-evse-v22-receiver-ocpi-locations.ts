@@ -166,6 +166,22 @@ export const tool: Tool = {
           'A jq filter to apply to the response to include certain fields. Consult the output schema in the tool description to see the fields that are available.\n\nFor example: to include only the `name` field in every object of a results array, you can provide ".results[].name".\n\nFor more information, see the [jq documentation](https://jqlang.org/manual/).',
       },
     },
+    required: [
+      'countryCode',
+      'partyID',
+      'locationID',
+      'evseUID',
+      'connectors',
+      'last_updated',
+      'status',
+      'uid',
+      'OCPI-from-country-code',
+      'OCPI-from-party-id',
+      'OCPI-to-country-code',
+      'OCPI-to-party-id',
+      'X-Correlation-ID',
+      'X-Request-ID',
+    ],
     $defs: {
       connector: {
         type: 'object',
