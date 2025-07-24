@@ -1,9 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { asBinaryContentResult } from 'ocpi-sdk-mcp/tools/types';
+import { Metadata, asBinaryContentResult } from 'ocpi-sdk-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import type { Metadata } from '../../../../';
 import OcpiSDK from 'ocpi-sdk';
 
 export const metadata: Metadata = {
@@ -254,6 +253,28 @@ export const tool: Tool = {
         $ref: '#/$defs/price',
       },
     },
+    required: [
+      'id',
+      'auth_method',
+      'cdr_location',
+      'cdr_token',
+      'charging_periods',
+      'country_code',
+      'currency',
+      'end_date_time',
+      'last_updated',
+      'party_id',
+      'start_date_time',
+      'total_cost',
+      'total_energy',
+      'total_time',
+      'OCPI-from-country-code',
+      'OCPI-from-party-id',
+      'OCPI-to-country-code',
+      'OCPI-to-party-id',
+      'X-Correlation-ID',
+      'X-Request-ID',
+    ],
     $defs: {
       geo_location: {
         type: 'object',
@@ -427,7 +448,6 @@ export const tool: Tool = {
                       type: 'string',
                     },
                   },
-                  required: [],
                 },
               },
               required: ['price_components'],
@@ -537,6 +557,7 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {},
 };
 
 export const handler = async (client: OcpiSDK, args: Record<string, unknown> | undefined) => {
