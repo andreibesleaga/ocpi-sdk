@@ -67,6 +67,9 @@ export const tool: Tool = {
       'X-Request-ID',
     ],
   },
+  annotations: {
+    readOnlyHint: true,
+  },
 };
 
 export const handler = async (client: OcpiSDK, args: Record<string, unknown> | undefined) => {
