@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.2.5-beta (2025-07-24)
+
+Full Changelog: [v0.2.4-beta...v0.2.5-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.4-beta...v0.2.5-beta)
+
+### Bug Fixes
+
+* **mcp:** include required section for top-level properties and support naming transformations ([c20afa8](https://github.com/andreibesleaga/ocpi-sdk/commit/c20afa8aaa9a6e52fc348f53d03216fe8319f463))
+* **mcp:** support jq filtering on cloudflare workers ([56be8ac](https://github.com/andreibesleaga/ocpi-sdk/commit/56be8acb4fae9e2ee5fb401feba680b30eabc5ba))
+
+
+### Chores
+
+* **internal:** codegen related update ([a55c336](https://github.com/andreibesleaga/ocpi-sdk/commit/a55c336a448a40100782962440679907530788f5))
+* **mcp:** formatting ([072215f](https://github.com/andreibesleaga/ocpi-sdk/commit/072215ff12a0094e689af863a8994fe450f898d7))
+* **mcp:** rework imports in tools ([59197d4](https://github.com/andreibesleaga/ocpi-sdk/commit/59197d43e54117cbafc2f3f0345137491a117738))
+* **ts:** reorder package.json imports ([6e47844](https://github.com/andreibesleaga/ocpi-sdk/commit/6e478440b8433bd3342aa01df4343f6e9e47a03b))
+
 ## 0.2.4-beta (2025-07-12)
 
 Full Changelog: [v0.2.3-beta...v0.2.4-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.3-beta...v0.2.4-beta)
