@@ -317,6 +317,9 @@ export const tool: Tool = {
       },
     },
   },
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: OcpiSDK, args: Record<string, unknown> | undefined) => {
