@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.2.6-beta (2025-08-07)
+
+Full Changelog: [v0.2.5-beta...v0.2.6-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.5-beta...v0.2.6-beta)
+
+### Features
+
+* **mcp:** add logging when environment variable is set ([70ae879](https://github.com/andreibesleaga/ocpi-sdk/commit/70ae87911f1e0936f1e520ff4a50c9b3bbbbf8b7))
+* **mcp:** add unix socket option for remote MCP ([b52d095](https://github.com/andreibesleaga/ocpi-sdk/commit/b52d095fea9590962431fa288ae86f40be19d2c6))
+* **mcp:** remote server with passthru auth ([3fcda9c](https://github.com/andreibesleaga/ocpi-sdk/commit/3fcda9c4a91b32638e2c4f95b278e800e3a77f73))
+
+
+### Bug Fixes
+
+* **mcp:** avoid sending `jq_filter` to base API ([c86c9c7](https://github.com/andreibesleaga/ocpi-sdk/commit/c86c9c7c2ed577568ea0f208f0872fce8df89626))
+* **mcp:** fix bug in header handling ([cf6543f](https://github.com/andreibesleaga/ocpi-sdk/commit/cf6543faa36170c33db4fa89f3ac8c7ec40e18f0))
+* **mcp:** fix tool description of jq_filter ([e49f7fb](https://github.com/andreibesleaga/ocpi-sdk/commit/e49f7fb13e1042a61d852424f20841df8d3ed7e0))
+* **mcp:** reverse validJson capability option and limit scope ([2c0274e](https://github.com/andreibesleaga/ocpi-sdk/commit/2c0274eb0b93b4338e2249bd93b795c09e0c226e))
+
+
+### Chores
+
+* **internal:** move publish config ([90f9061](https://github.com/andreibesleaga/ocpi-sdk/commit/90f9061df92f8f7b27da9f8938cbd26ae1350ff0))
+* **internal:** remove redundant imports config ([f37b00c](https://github.com/andreibesleaga/ocpi-sdk/commit/f37b00cc0098a0eed215895084b6f7c27b299db4))
+* **mcp:** refactor streamable http transport ([bb91c66](https://github.com/andreibesleaga/ocpi-sdk/commit/bb91c661b135ee0f259761f262dd86de64dab618))
+
 ## 0.2.5-beta (2025-07-24)
 
 Full Changelog: [v0.2.4-beta...v0.2.5-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.4-beta...v0.2.5-beta)
