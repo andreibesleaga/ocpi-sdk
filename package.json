@@ -1,6 +1,6 @@
 {
   "name": "ocpi-sdk",
-  "version": "0.2.5-beta",
+  "version": "0.2.6-beta",
   "description": "The official TypeScript library for the Ocpi SDK API",
   "author": "Ocpi SDK <>",
   "types": "dist/index.d.ts",
@@ -13,6 +13,9 @@
     "**/*"
   ],
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "./scripts/test",
     "build": "./scripts/build",
@@ -45,10 +48,6 @@
     "tsconfig-paths": "^4.0.0",
     "typescript": "5.8.3",
     "typescript-eslint": "8.31.1"
-  },
-  "imports": {
-    "ocpi-sdk": ".",
-    "ocpi-sdk/*": "./src/*"
   },
   "exports": {
     ".": {
