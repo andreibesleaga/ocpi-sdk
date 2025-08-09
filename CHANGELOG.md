@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.7-beta (2025-08-09)
+
+Full Changelog: [v0.2.6-beta...v0.2.7-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.6-beta...v0.2.7-beta)
+
+### Chores
+
+* **internal:** update comment in script ([152410a](https://github.com/andreibesleaga/ocpi-sdk/commit/152410a1d345f0fc55f8afbfad424865b90fc173))
+* update @stainless-api/prism-cli to v5.15.0 ([bbae816](https://github.com/andreibesleaga/ocpi-sdk/commit/bbae81622fe8d8bde73f5d6bf5e23797dbe8be9a))
+
 ## 0.2.6-beta (2025-08-07)
 
 Full Changelog: [v0.2.5-beta...v0.2.6-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.5-beta...v0.2.6-beta)
