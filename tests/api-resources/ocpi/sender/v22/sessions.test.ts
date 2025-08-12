@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource sessions', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.sessions.retrieve('uid', {
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
@@ -20,8 +19,7 @@ describe('resource sessions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('list: required and optional params', async () => {
+  test('list: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.sessions.list({
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
@@ -36,8 +34,7 @@ describe('resource sessions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('updateChargingPreferences: required and optional params', async () => {
+  test('updateChargingPreferences: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.sessions.updateChargingPreferences('sessionID', {
       profile_type: 'CHEAP',
       'OCPI-from-country-code': 'OCPI-from-country-code',

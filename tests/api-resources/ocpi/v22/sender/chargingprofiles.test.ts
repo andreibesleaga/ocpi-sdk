@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource chargingprofiles', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.ocpi.v22.sender.chargingprofiles.update('sessionId', {
       charging_profile: {
         charging_rate_unit: 'W',
@@ -28,8 +27,7 @@ describe('resource chargingprofiles', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('createResult: required and optional params', async () => {
+  test('createResult: required and optional params', async () => {
     const response = await client.ocpi.v22.sender.chargingprofiles.createResult('uid', {
       result: 'ACCEPTED',
       'OCPI-from-country-code': 'OCPI-from-country-code',

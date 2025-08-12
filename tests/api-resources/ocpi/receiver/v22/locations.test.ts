@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource locations', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.retrieve('connectorID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -24,8 +23,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.update('connectorID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -41,8 +39,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('modify: required and optional params', async () => {
+  test('modify: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.modify('locationID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -56,8 +53,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('modifyEvse: required and optional params', async () => {
+  test('modifyEvse: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.modifyEvse('evseUID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -72,8 +68,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('retrieveEvse: required and optional params', async () => {
+  test('retrieveEvse: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.retrieveEvse('evseUID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -87,8 +82,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('updateConnector: required and optional params', async () => {
+  test('updateConnector: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.updateConnector('connectorID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -113,8 +107,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('updateEvse: required and optional params', async () => {
+  test('updateEvse: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.locations.updateEvse('evseUID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
