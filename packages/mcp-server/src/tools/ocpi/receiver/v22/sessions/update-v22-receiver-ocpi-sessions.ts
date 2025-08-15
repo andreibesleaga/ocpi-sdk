@@ -31,6 +31,7 @@ export const tool: Tool = {
       },
       body: {
         type: 'object',
+        additionalProperties: true,
       },
       'OCPI-from-country-code': {
         type: 'string',
