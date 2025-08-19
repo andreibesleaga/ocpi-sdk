@@ -17,7 +17,7 @@ export const parseAuthHeaders = (req: IncomingMessage): Partial<ClientOptions> =
   }
 
   const apiKey =
-    req.headers['x-ocpi-sdk-api-key'] instanceof Array ?
+    Array.isArray(req.headers['x-ocpi-sdk-api-key']) ?
       req.headers['x-ocpi-sdk-api-key'][0]
     : req.headers['x-ocpi-sdk-api-key'];
   return { apiKey };
