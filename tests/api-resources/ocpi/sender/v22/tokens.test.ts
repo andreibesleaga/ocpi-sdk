@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource tokens', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.tokens.retrieve('uid', {
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
@@ -20,8 +19,7 @@ describe('resource tokens', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('list: required and optional params', async () => {
+  test('list: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.tokens.list({
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
@@ -36,8 +34,7 @@ describe('resource tokens', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('authorize: required and optional params', async () => {
+  test('authorize: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.tokens.authorize('tokenUID', {
       location_id: 'location_id',
       'OCPI-from-country-code': 'OCPI-from-country-code',

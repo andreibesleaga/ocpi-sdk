@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource cdrs', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('create: required and optional params', async () => {
+  test('create: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.cdrs.create({
       id: 'id',
       auth_method: 'AUTH_REQUEST',
@@ -118,8 +117,7 @@ describe('resource cdrs', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.cdrs.retrieve('cdrID', {
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',

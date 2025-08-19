@@ -716,7 +716,9 @@ export class OcpiSDK {
 
   ocpi: API.Ocpi = new API.Ocpi(this);
 }
+
 OcpiSDK.Ocpi = Ocpi;
+
 export declare namespace OcpiSDK {
   export type RequestOptions = Opts.RequestOptions;
 

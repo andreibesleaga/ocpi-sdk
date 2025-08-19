@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource tariffs', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.tariffs.retrieve('tariffID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -22,8 +21,7 @@ describe('resource tariffs', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.tariffs.update('tariffID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -76,8 +74,7 @@ describe('resource tariffs', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('delete: required and optional params', async () => {
+  test('delete: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.tariffs.delete('tariffID', {
       countryCode: 'countryCode',
       partyID: 'partyID',

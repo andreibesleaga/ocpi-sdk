@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource tokens', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.tokens.retrieve('tokenUID', {
       countryCode: 'countryCode',
       partyID: 'partyID',
@@ -23,8 +22,7 @@ describe('resource tokens', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('update: required and optional params', async () => {
+  test('update: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.tokens.update('tokenUID', {
       countryCode: 'countryCode',
       partyID: 'partyID',

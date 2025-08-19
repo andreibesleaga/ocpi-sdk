@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource locations', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('retrieve: required and optional params', async () => {
+  test('retrieve: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.locations.retrieve('connectorID', {
       locationID: 'locationID',
       evseUID: 'evseUID',
@@ -22,8 +21,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('list: required and optional params', async () => {
+  test('list: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.locations.list({
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
@@ -38,8 +36,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('retrieveEvse: required and optional params', async () => {
+  test('retrieveEvse: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.locations.retrieveEvse('evseUID', {
       locationID: 'locationID',
       'OCPI-from-country-code': 'OCPI-from-country-code',
@@ -51,8 +48,7 @@ describe('resource locations', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('retrievePage: required and optional params', async () => {
+  test('retrievePage: required and optional params', async () => {
     const response = await client.ocpi.sender.v22.locations.retrievePage('uid', {
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
