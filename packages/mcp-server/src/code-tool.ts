@@ -1,10 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type ClientOptions } from 'ocpi-sdk/client';
-
 import { dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import OcpiSDK from 'ocpi-sdk';
+import OcpiSDK, { ClientOptions } from 'ocpi-sdk';
 import { Endpoint, ContentBlock, Metadata } from './tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';

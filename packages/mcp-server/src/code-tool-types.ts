@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { type ClientOptions } from 'ocpi-sdk/client';
+import { ClientOptions } from 'ocpi-sdk';
 
 export type WorkerInput = {
   opts: ClientOptions;
