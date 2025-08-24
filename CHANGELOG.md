@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.4.0-beta (2025-08-24)
+
+Full Changelog: [v0.3.0-beta...v0.4.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.3.0-beta...v0.4.0-beta)
+
+### Features
+
+* **mcp:** add code execution tool ([ae6e3a1](https://github.com/andreibesleaga/ocpi-sdk/commit/ae6e3a153eb1299b3d801bf3cf6d592435573332))
+* **mcp:** add option to infer mcp client ([3d19b33](https://github.com/andreibesleaga/ocpi-sdk/commit/3d19b33dd9f7d397c48032c68f8541ad173831cb))
+
+
+### Chores
+
+* add package to package.json ([41b1626](https://github.com/andreibesleaga/ocpi-sdk/commit/41b16262b8221fe98da9bea71e16832ce742c1e3))
+* **client:** qualify global Blob ([94eba38](https://github.com/andreibesleaga/ocpi-sdk/commit/94eba38feb0a354a94aadf2decce10b935d4888d))
+* **internal:** codegen related update ([3a5f428](https://github.com/andreibesleaga/ocpi-sdk/commit/3a5f42865d41b355e340ea8c997a752b7dcb2cbd))
+* **internal:** codegen related update ([7f0f80a](https://github.com/andreibesleaga/ocpi-sdk/commit/7f0f80a1348900bde4dd4eace00112901c764590))
+* **internal:** make mcp-server publishing public by defaut ([ae5b459](https://github.com/andreibesleaga/ocpi-sdk/commit/ae5b45985be86d0be7ba8901d3fb4fb215cc638e))
+* **mcp:** add cors to oauth metadata route ([43df3d2](https://github.com/andreibesleaga/ocpi-sdk/commit/43df3d201d0d4150b3b43c88e11dea1273203f9b))
+* **mcp:** update package.json ([5776ded](https://github.com/andreibesleaga/ocpi-sdk/commit/5776ded4f09f90177a76c26dbfb8aeb3c63cad26))
+* **mcp:** update types ([4d60b53](https://github.com/andreibesleaga/ocpi-sdk/commit/4d60b53aa88b0b16bbb8a6e9fad6249f57f079ee))
+* update CI script ([a2d0d9d](https://github.com/andreibesleaga/ocpi-sdk/commit/a2d0d9d87c0fbf7c5c4e19504bccc263873fe54f))
+
 ## 0.3.0-beta (2025-08-19)
 
 Full Changelog: [v0.2.6-beta...v0.3.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.6-beta...v0.3.0-beta)
