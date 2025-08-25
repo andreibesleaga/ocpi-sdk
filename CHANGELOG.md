@@ -1,5 +1,53 @@
 # Changelog
 
+## 0.4.0-beta (2025-08-24)
+
+Full Changelog: [v0.3.0-beta...v0.4.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.3.0-beta...v0.4.0-beta)
+
+### Features
+
+* **mcp:** add code execution tool ([ae6e3a1](https://github.com/andreibesleaga/ocpi-sdk/commit/ae6e3a153eb1299b3d801bf3cf6d592435573332))
+* **mcp:** add option to infer mcp client ([3d19b33](https://github.com/andreibesleaga/ocpi-sdk/commit/3d19b33dd9f7d397c48032c68f8541ad173831cb))
+
+
+### Chores
+
+* add package to package.json ([41b1626](https://github.com/andreibesleaga/ocpi-sdk/commit/41b16262b8221fe98da9bea71e16832ce742c1e3))
+* **client:** qualify global Blob ([94eba38](https://github.com/andreibesleaga/ocpi-sdk/commit/94eba38feb0a354a94aadf2decce10b935d4888d))
+* **internal:** codegen related update ([3a5f428](https://github.com/andreibesleaga/ocpi-sdk/commit/3a5f42865d41b355e340ea8c997a752b7dcb2cbd))
+* **internal:** codegen related update ([7f0f80a](https://github.com/andreibesleaga/ocpi-sdk/commit/7f0f80a1348900bde4dd4eace00112901c764590))
+* **internal:** make mcp-server publishing public by defaut ([ae5b459](https://github.com/andreibesleaga/ocpi-sdk/commit/ae5b45985be86d0be7ba8901d3fb4fb215cc638e))
+* **mcp:** add cors to oauth metadata route ([43df3d2](https://github.com/andreibesleaga/ocpi-sdk/commit/43df3d201d0d4150b3b43c88e11dea1273203f9b))
+* **mcp:** update package.json ([5776ded](https://github.com/andreibesleaga/ocpi-sdk/commit/5776ded4f09f90177a76c26dbfb8aeb3c63cad26))
+* **mcp:** update types ([4d60b53](https://github.com/andreibesleaga/ocpi-sdk/commit/4d60b53aa88b0b16bbb8a6e9fad6249f57f079ee))
+* update CI script ([a2d0d9d](https://github.com/andreibesleaga/ocpi-sdk/commit/a2d0d9d87c0fbf7c5c4e19504bccc263873fe54f))
+
+## 0.3.0-beta (2025-08-19)
+
+Full Changelog: [v0.2.6-beta...v0.3.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.6-beta...v0.3.0-beta)
+
+### Features
+
+* **mcp:** parse query string as mcp client options in mcp server ([f4f7faf](https://github.com/andreibesleaga/ocpi-sdk/commit/f4f7fafad51b33593073b6c97645196034a6e687))
+
+
+### Bug Fixes
+
+* **mcp:** generate additionalProperties=true for map schemas to avoid validation issues ([354bf88](https://github.com/andreibesleaga/ocpi-sdk/commit/354bf8816be06387ecc68fee66a4760df19177bb))
+
+
+### Chores
+
+* **deps:** update dependency @types/node to v20.17.58 ([13b22b7](https://github.com/andreibesleaga/ocpi-sdk/commit/13b22b798808555ba5fa7b180ed263fac80aa806))
+* **internal:** codegen related update ([57ed955](https://github.com/andreibesleaga/ocpi-sdk/commit/57ed95572b58007a0b3bb4c11871c98a68c59b2b))
+* **internal:** formatting change ([3b40012](https://github.com/andreibesleaga/ocpi-sdk/commit/3b40012eb1c94e731f363e3ad9217a46e0b368db))
+* **internal:** refactor array check ([be1a666](https://github.com/andreibesleaga/ocpi-sdk/commit/be1a666f67d750b8b7343d1dfdc6ab97daaa37d1))
+* **internal:** update comment in script ([152410a](https://github.com/andreibesleaga/ocpi-sdk/commit/152410a1d345f0fc55f8afbfad424865b90fc173))
+* **mcp:** document remote server in README.md ([5e22102](https://github.com/andreibesleaga/ocpi-sdk/commit/5e221029076cceef200dd810db01129dd9e236e2))
+* **mcp:** minor cleanup of types and package.json ([575d3d7](https://github.com/andreibesleaga/ocpi-sdk/commit/575d3d7cb04e93cd13ea3c1b7e116b85c73c2434))
+* **mcp:** update README ([e2d85b7](https://github.com/andreibesleaga/ocpi-sdk/commit/e2d85b7c38a9f67c06d85efb0cdb99ec1081bc90))
+* update @stainless-api/prism-cli to v5.15.0 ([bbae816](https://github.com/andreibesleaga/ocpi-sdk/commit/bbae81622fe8d8bde73f5d6bf5e23797dbe8be9a))
+
 ## 0.2.6-beta (2025-08-07)
 
 Full Changelog: [v0.2.5-beta...v0.2.6-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.2.5-beta...v0.2.6-beta)

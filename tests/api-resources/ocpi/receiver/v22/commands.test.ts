@@ -8,8 +8,7 @@ const client = new OcpiSDK({
 });
 
 describe('resource commands', () => {
-  // skipped: tests are disabled for the time being
-  test.skip('cancelReservation: required and optional params', async () => {
+  test('cancelReservation: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.commands.cancelReservation({
       reservation_id: 'reservation_id',
       response_url: 'response_url',
@@ -22,8 +21,7 @@ describe('resource commands', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('reserveNow: required and optional params', async () => {
+  test('reserveNow: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.commands.reserveNow({
       token: {
         contract_id: 'contract_id',
@@ -56,8 +54,7 @@ describe('resource commands', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('startSession: required and optional params', async () => {
+  test('startSession: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.commands.startSession({
       token: {
         contract_id: 'contract_id',
@@ -88,8 +85,7 @@ describe('resource commands', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('stopSession: required and optional params', async () => {
+  test('stopSession: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.commands.stopSession({
       response_url: 'response_url',
       session_id: 'session_id',
@@ -102,8 +98,7 @@ describe('resource commands', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('unlockConnector: required and optional params', async () => {
+  test('unlockConnector: required and optional params', async () => {
     const response = await client.ocpi.receiver.v22.commands.unlockConnector({
       connector_id: 'connector_id',
       evse_uid: 'evse_uid',

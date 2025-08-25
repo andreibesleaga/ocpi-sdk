@@ -675,7 +675,7 @@ export class OcpiSDK {
         // Preserve legacy string encoding behavior for now
         headers.values.has('content-type')) ||
       // `Blob` is superset of `File`
-      body instanceof Blob ||
+      ((globalThis as any).Blob && body instanceof (globalThis as any).Blob) ||
       // `FormData` -> `multipart/form-data`
       body instanceof FormData ||
       // `URLSearchParams` -> `application/x-www-form-urlencoded`
@@ -716,7 +716,9 @@ export class OcpiSDK {
 
   ocpi: API.Ocpi = new API.Ocpi(this);
 }
+
 OcpiSDK.Ocpi = Ocpi;
+
 export declare namespace OcpiSDK {
   export type RequestOptions = Opts.RequestOptions;
 
