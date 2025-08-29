@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.2-beta (2025-08-29)
+
+Full Changelog: [v0.4.1-beta...v0.4.2-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.4.1-beta...v0.4.2-beta)
+
+### Chores
+
+* **internal:** update global Error reference ([8b5f899](https://github.com/andreibesleaga/ocpi-sdk/commit/8b5f89978a05b8fe71eb76a1cc57d6b34e060338))
+
 ## 0.4.1-beta (2025-08-25)
 
 Full Changelog: [v0.4.0-beta...v0.4.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.4.0-beta...v0.4.1-beta)
