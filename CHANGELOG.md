@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.5.0-beta (2025-09-05)
+
+Full Changelog: [v0.4.1-beta...v0.5.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.4.1-beta...v0.5.0-beta)
+
+### Features
+
+* **mcp:** allow setting logging level ([71fd034](https://github.com/andreibesleaga/ocpi-sdk/commit/71fd0345773e557d3f6fb95cc19b2304949af6f5))
+* **mcp:** expose client options in `streamableHTTPApp` ([89f38fa](https://github.com/andreibesleaga/ocpi-sdk/commit/89f38fad585a40659ad3fdc70e6d0063c709522d))
+
+
+### Chores
+
+* **internal:** codegen related update ([cbe79ea](https://github.com/andreibesleaga/ocpi-sdk/commit/cbe79eacbeb9d4f7de5467c99fa32cbefa420e49))
+* **internal:** codegen related update ([41ec8ee](https://github.com/andreibesleaga/ocpi-sdk/commit/41ec8ee63975d93b4130b9c74e2c46037cb690ef))
+* **internal:** update global Error reference ([8b5f899](https://github.com/andreibesleaga/ocpi-sdk/commit/8b5f89978a05b8fe71eb76a1cc57d6b34e060338))
+
 ## 0.4.1-beta (2025-08-25)
 
 Full Changelog: [v0.4.0-beta...v0.4.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.4.0-beta...v0.4.1-beta)
