@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.5.1-beta (2025-09-06)
+
+Full Changelog: [v0.5.0-beta...v0.5.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.0-beta...v0.5.1-beta)
+
+### Bug Fixes
+
+* **mcp:** fix query options parsing ([b0a00a8](https://github.com/andreibesleaga/ocpi-sdk/commit/b0a00a8a6269e6bb80382008c608cb9b9a68b766))
+
+
+### Chores
+
+* ci build action ([736a7a5](https://github.com/andreibesleaga/ocpi-sdk/commit/736a7a5dd9b2535aed085722f926b804615cdd0d))
+
 ## 0.5.0-beta (2025-09-05)
 
 Full Changelog: [v0.4.1-beta...v0.5.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.4.1-beta...v0.5.0-beta)
