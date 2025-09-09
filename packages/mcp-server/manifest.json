@@ -4,15 +4,13 @@
   "version": "0.4.1-beta",
   "description": "The official MCP Server for the Ocpi SDK API",
   "author": {
-    "name": "Ocpi SDK",
-    "email": ""
+    "name": "Ocpi SDK"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andreibesleaga/ocpi-sdk.git"
   },
   "homepage": "https://github.com/andreibesleaga/ocpi-sdk/tree/main/packages/mcp-server#readme",
-  "documentation": "",
   "server": {
     "type": "node",
     "entry_point": "${__dirname}/index.js",

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.2-beta (2025-09-09)
+
+Full Changelog: [v0.5.1-beta...v0.5.2-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.1-beta...v0.5.2-beta)
+
+### Bug Fixes
+
+* coerce nullable values to undefined ([9728fd5](https://github.com/andreibesleaga/ocpi-sdk/commit/9728fd5b3eac0be84a6a47e767da0162edfefd51))
+* **mcp:** update dxt manifest.json files ([3d33e45](https://github.com/andreibesleaga/ocpi-sdk/commit/3d33e45398e05045d1bfec25003a89d8f45ef272))
+
 ## 0.5.1-beta (2025-09-06)
 
 Full Changelog: [v0.5.0-beta...v0.5.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.0-beta...v0.5.1-beta)
