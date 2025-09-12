@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.3-beta (2025-09-12)
+
+Full Changelog: [v0.5.2-beta...v0.5.3-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.2-beta...v0.5.3-beta)
+
+### Chores
+
+* **internal:** codegen related update ([bc84014](https://github.com/andreibesleaga/ocpi-sdk/commit/bc84014bba18aa756119e0e022211d5173b5e3c1))
+* **mcp:** upload dxt as release asset ([c9ffb03](https://github.com/andreibesleaga/ocpi-sdk/commit/c9ffb03089b9227a5d368fff14c69ffaec4c6df3))
+
 ## 0.5.2-beta (2025-09-09)
 
 Full Changelog: [v0.5.1-beta...v0.5.2-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.1-beta...v0.5.2-beta)
