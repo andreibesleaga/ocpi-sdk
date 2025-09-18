@@ -1,5 +1,5 @@
 {
-  "dxt_version": "0.1",
+  "dxt_version": "0.2",
   "name": "ocpi-sdk-mcp",
   "version": "0.5.3-beta",
   "description": "The official MCP Server for the Ocpi SDK API",
@@ -13,7 +13,7 @@
   "homepage": "https://github.com/andreibesleaga/ocpi-sdk/tree/main/packages/mcp-server#readme",
   "server": {
     "type": "node",
-    "entry_point": "${__dirname}/index.js",
+    "entry_point": "index.js",
     "mcp_config": {
       "command": "node",
       "args": ["${__dirname}/index.js"],
@@ -30,6 +30,7 @@
       "type": "string"
     }
   },
+  "tools": [],
   "tools_generated": true,
   "compatibility": {
     "runtimes": {
