@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.6.0-beta (2025-09-20)
+
+Full Changelog: [v0.5.3-beta...v0.6.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.3-beta...v0.6.0-beta)
+
+### Features
+
+* **mcp:** add docs search tool ([88bdacd](https://github.com/andreibesleaga/ocpi-sdk/commit/88bdacd810003c373497d16f8c3d146756d04315))
+
+
+### Bug Fixes
+
+* **ci:** set permissions for DXT publish action ([ec3d607](https://github.com/andreibesleaga/ocpi-sdk/commit/ec3d607ec46a4d0146cb2f64dd506537d04ebddf))
+
+
+### Chores
+
+* **codegen:** internal codegen update ([500beb4](https://github.com/andreibesleaga/ocpi-sdk/commit/500beb4125ee911db0ec0e5f9851ea40cc8fcfa2))
+* do not install brew dependencies in ./scripts/bootstrap by default ([fe35c8c](https://github.com/andreibesleaga/ocpi-sdk/commit/fe35c8c3e58486d8aff947ca9af96f5f37e1b7b4))
+* **internal:** gitignore .mcpb files ([7b2ba8a](https://github.com/andreibesleaga/ocpi-sdk/commit/7b2ba8abedace2157c9143f38dbc1dedbd1d80ad))
+* **mcp:** rename dxt to mcpb ([145e060](https://github.com/andreibesleaga/ocpi-sdk/commit/145e0607e56f77517a4f31384a1be163732821b4))
+
 ## 0.5.3-beta (2025-09-12)
 
 Full Changelog: [v0.5.2-beta...v0.5.3-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.2-beta...v0.5.3-beta)
