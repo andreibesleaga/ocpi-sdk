@@ -1,6 +1,6 @@
 {
   "name": "ocpi-sdk-mcp",
-  "version": "0.6.0-beta",
+  "version": "0.7.0-beta",
   "description": "The official MCP Server for the Ocpi SDK API",
   "author": "Ocpi SDK <>",
   "types": "dist/index.d.ts",
