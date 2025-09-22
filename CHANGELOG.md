@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.7.0-beta (2025-09-22)
+
+Full Changelog: [v0.6.0-beta...v0.7.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.6.0-beta...v0.7.0-beta)
+
+### Features
+
+* **api:** manual updates ([a12aa82](https://github.com/andreibesleaga/ocpi-sdk/commit/a12aa82a317bc2287e49a9d4105e635d3a41daeb))
+* **api:** manual updates ([b9ea4f2](https://github.com/andreibesleaga/ocpi-sdk/commit/b9ea4f2f4a3b8ea9ada58ab4d49164ecf5359029))
+
 ## 0.6.0-beta (2025-09-20)
 
 Full Changelog: [v0.5.3-beta...v0.6.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.5.3-beta...v0.6.0-beta)
