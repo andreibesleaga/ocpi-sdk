@@ -1,7 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
 import { APIResource } from '../../../../core/resource';
-import * as LocationsAPI from './locations';
 import * as V22API from '../../sender/v22/v22';
 import { APIPromise } from '../../../../core/api-promise';
 import { buildHeaders } from '../../../../internal/headers';
@@ -10,13 +9,15 @@ import { path } from '../../../../internal/utils/path';
 
 export class Locations extends APIResource {
   retrieve(
-    locationID: string,
+    connectorID: string,
     params: LocationRetrieveParams,
     options?: RequestOptions,
   ): APIPromise<Response> {
     const {
       countryCode,
       partyID,
+      locationID,
+      evseUID,
       'OCPI-from-country-code': ocpiFromCountryCode,
       'OCPI-from-party-id': ocpiFromPartyID,
       'OCPI-to-country-code': ocpiToCountryCode,
@@ -24,53 +25,61 @@ export class Locations extends APIResource {
       'X-Correlation-ID': xCorrelationID,
       'X-Request-ID': xRequestID,
     } = params;
-    return this._client.get(path`/ocpi/receiver/2.2/locations/${countryCode}/${partyID}/${locationID}`, {
-      ...options,
-      headers: buildHeaders([
-        {
-          Accept: '*/*',
-          'OCPI-from-country-code': ocpiFromCountryCode,
-          'OCPI-from-party-id': ocpiFromPartyID,
-          'OCPI-to-country-code': ocpiToCountryCode,
-          'OCPI-to-party-id': ocpiToPartyID,
-          'X-Correlation-ID': xCorrelationID,
-          'X-Request-ID': xRequestID,
-        },
-        options?.headers,
-      ]),
-      __binaryResponse: true,
-    });
+    return this._client.get(
+      path`/ocpi/receiver/2.2/locations/${countryCode}/${partyID}/${locationID}/${evseUID}/${connectorID}`,
+      {
+        ...options,
+        headers: buildHeaders([
+          {
+            Accept: '*/*',
+            'OCPI-from-country-code': ocpiFromCountryCode,
+            'OCPI-from-party-id': ocpiFromPartyID,
+            'OCPI-to-country-code': ocpiToCountryCode,
+            'OCPI-to-party-id': ocpiToPartyID,
+            'X-Correlation-ID': xCorrelationID,
+            'X-Request-ID': xRequestID,
+          },
+          options?.headers,
+        ]),
+        __binaryResponse: true,
+      },
+    );
   }
 
-  update(locationID: string, params: LocationUpdateParams, options?: RequestOptions): APIPromise<Response> {
+  update(connectorID: string, params: LocationUpdateParams, options?: RequestOptions): APIPromise<Response> {
     const {
       countryCode,
       partyID,
+      locationID,
+      evseUID,
+      body,
       'OCPI-from-country-code': ocpiFromCountryCode,
       'OCPI-from-party-id': ocpiFromPartyID,
       'OCPI-to-country-code': ocpiToCountryCode,
       'OCPI-to-party-id': ocpiToPartyID,
       'X-Correlation-ID': xCorrelationID,
       'X-Request-ID': xRequestID,
-      ...body
     } = params;
-    return this._client.put(path`/ocpi/receiver/2.2/locations/${countryCode}/${partyID}/${locationID}`, {
-      body,
-      ...options,
-      headers: buildHeaders([
-        {
-          Accept: '*/*',
-          'OCPI-from-country-code': ocpiFromCountryCode,
-          'OCPI-from-party-id': ocpiFromPartyID,
-          'OCPI-to-country-code': ocpiToCountryCode,
-          'OCPI-to-party-id': ocpiToPartyID,
-          'X-Correlation-ID': xCorrelationID,
-          'X-Request-ID': xRequestID,
-        },
-        options?.headers,
-      ]),
-      __binaryResponse: true,
-    });
+    return this._client.patch(
+      path`/ocpi/receiver/2.2/locations/${countryCode}/${partyID}/${locationID}/${evseUID}/${connectorID}`,
+      {
+        body: body,
+        ...options,
+        headers: buildHeaders([
+          {
+            Accept: '*/*',
+            'OCPI-from-country-code': ocpiFromCountryCode,
+            'OCPI-from-party-id': ocpiFromPartyID,
+            'OCPI-to-country-code': ocpiToCountryCode,
+            'OCPI-to-party-id': ocpiToPartyID,
+            'X-Correlation-ID': xCorrelationID,
+            'X-Request-ID': xRequestID,
+          },
+          options?.headers,
+        ]),
+        __binaryResponse: true,
+      },
+    );
   }
 
   modify(locationID: string, params: LocationModifyParams, options?: RequestOptions): APIPromise<Response> {
@@ -469,6 +478,16 @@ export interface LocationRetrieveParams {
   partyID: string;
 
   /**
+   * Path param:
+   */
+  locationID: string;
+
+  /**
+   * Path param:
+   */
+  evseUID: string;
+
+  /**
    * Header param:
    */
   'OCPI-from-country-code': string;
@@ -511,49 +530,19 @@ export interface LocationUpdateParams {
   partyID: string;
 
   /**
-   * Body param:
+   * Path param:
    */
-  id: string;
+  locationID: string;
+
+  /**
+   * Path param:
+   */
+  evseUID: string;
 
   /**
    * Body param:
    */
-  address: string;
-
-  /**
-   * Body param:
-   */
-  city: string;
-
-  /**
-   * Body param:
-   */
-  coordinates: GeoLocation;
-
-  /**
-   * Body param:
-   */
-  country: string;
-
-  /**
-   * Body param:
-   */
-  country_code: string;
-
-  /**
-   * Body param:
-   */
-  last_updated: string;
-
-  /**
-   * Body param:
-   */
-  party_id: string;
-
-  /**
-   * Body param:
-   */
-  publish: boolean;
+  body: { [key: string]: unknown };
 
   /**
    * Header param:
@@ -584,161 +573,6 @@ export interface LocationUpdateParams {
    * Header param:
    */
   'X-Request-ID': string;
-
-  /**
-   * Body param:
-   */
-  charging_when_closed?: string;
-
-  /**
-   * Body param:
-   */
-  directions?: Array<V22API.DisplayText>;
-
-  /**
-   * Body param:
-   */
-  energy_mix?: EnergyMix;
-
-  /**
-   * Body param:
-   */
-  evses?: Array<Evse>;
-
-  /**
-   * Body param:
-   */
-  facilities?: Array<
-    | 'HOTEL'
-    | 'RESTAURANT'
-    | 'CAFE'
-    | 'MALL'
-    | 'SUPERMARKET'
-    | 'SPORT'
-    | 'RECREATION_AREA'
-    | 'NATURE'
-    | 'MUSEUM'
-    | 'BIKE_SHARING'
-    | 'BUS_STOP'
-    | 'TAXI_STAND'
-    | 'TRAM_STOP'
-    | 'METRO_STATION'
-    | 'TRAIN_STATION'
-    | 'AIRPORT'
-    | 'PARKING_LOT'
-    | 'CARPOOL_PARKING'
-    | 'FUEL_STATION'
-    | 'WIFI'
-  >;
-
-  /**
-   * Body param:
-   */
-  images?: Array<Image>;
-
-  /**
-   * Body param:
-   */
-  name?: string | null;
-
-  /**
-   * Body param:
-   */
-  opening_times?: LocationUpdateParams.OpeningTimes;
-
-  /**
-   * Body param:
-   */
-  operator?: BusinessDetails;
-
-  /**
-   * Body param:
-   */
-  owner?: BusinessDetails;
-
-  /**
-   * Body param:
-   */
-  parking_type?:
-    | 'ALONG_MOTORWAY'
-    | 'PARKING_GARAGE'
-    | 'PARKING_LOT'
-    | 'ON_DRIVEWAY'
-    | 'ON_STREET'
-    | 'UNDERGROUND_GARAGE'
-    | null;
-
-  /**
-   * Body param:
-   */
-  postal_code?: string | null;
-
-  /**
-   * Body param:
-   */
-  publish_allowed_to?: Array<LocationUpdateParams.PublishAllowedTo>;
-
-  /**
-   * Body param:
-   */
-  related_locations?: Array<LocationUpdateParams.RelatedLocation>;
-
-  /**
-   * Body param:
-   */
-  state?: string | null;
-
-  /**
-   * Body param:
-   */
-  suboperator?: BusinessDetails;
-
-  /**
-   * Body param:
-   */
-  time_zone?: string;
-}
-
-export namespace LocationUpdateParams {
-  export interface OpeningTimes {
-    twentyfourseven: boolean;
-
-    exceptional_closings?: Array<LocationsAPI.ExceptionalPeriod>;
-
-    exceptional_openings?: Array<LocationsAPI.ExceptionalPeriod>;
-
-    regular_hours?: Array<OpeningTimes.RegularHour>;
-  }
-
-  export namespace OpeningTimes {
-    export interface RegularHour {
-      period_begin: string;
-
-      period_end: string;
-
-      weekday: number;
-    }
-  }
-
-  export interface PublishAllowedTo {
-    'group_id '?: string;
-
-    issuer?: string;
-
-    type?: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
-
-    uid?: string;
-
-    visual_number?: string;
-  }
-
-  export interface RelatedLocation {
-    latitude: string;
-
-    longitude: string;
-
-    name?: V22API.DisplayText;
-  }
 }
 
 export interface LocationModifyParams {
