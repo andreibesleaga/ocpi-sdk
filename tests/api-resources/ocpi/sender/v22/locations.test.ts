@@ -9,9 +9,7 @@ const client = new OcpiSDK({
 
 describe('resource locations', () => {
   test('retrieve: required and optional params', async () => {
-    const response = await client.ocpi.sender.v22.locations.retrieve('connectorID', {
-      locationID: 'locationID',
-      evseUID: 'evseUID',
+    const response = await client.ocpi.sender.v22.locations.retrieve('locationID', {
       'OCPI-from-country-code': 'OCPI-from-country-code',
       'OCPI-from-party-id': 'OCPI-from-party-id',
       'OCPI-to-country-code': 'OCPI-to-country-code',
