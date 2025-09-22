@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   operation: 'read',
   tags: [],
   httpMethod: 'get',
-  httpPath: '/ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}',
-  operationId: 'getClientOwnedLocation',
+  httpPath: '/ocpi/receiver/2.2/locations/{countryCode}/{partyID}/{locationID}/{evseUID}/{connectorID}',
+  operationId: 'getClientOwnedConnector',
 };
 
 export const tool: Tool = {
@@ -27,6 +27,12 @@ export const tool: Tool = {
         type: 'string',
       },
       locationID: {
+        type: 'string',
+      },
+      evseUID: {
+        type: 'string',
+      },
+      connectorID: {
         type: 'string',
       },
       'OCPI-from-country-code': {
@@ -52,6 +58,8 @@ export const tool: Tool = {
       'countryCode',
       'partyID',
       'locationID',
+      'evseUID',
+      'connectorID',
       'OCPI-from-country-code',
       'OCPI-from-party-id',
       'OCPI-to-country-code',
@@ -66,8 +74,8 @@ export const tool: Tool = {
 };
 
 export const handler = async (client: OcpiSDK, args: Record<string, unknown> | undefined) => {
-  const { locationID, ...body } = args as any;
-  return asBinaryContentResult(await client.ocpi.receiver.v22.locations.retrieve(locationID, body));
+  const { connectorID, ...body } = args as any;
+  return asBinaryContentResult(await client.ocpi.receiver.v22.locations.retrieve(connectorID, body));
 };
 
 export default { metadata, tool, handler };

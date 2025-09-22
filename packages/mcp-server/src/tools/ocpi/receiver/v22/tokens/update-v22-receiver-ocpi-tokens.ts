@@ -9,9 +9,9 @@ export const metadata: Metadata = {
   resource: 'ocpi.receiver.v22.tokens',
   operation: 'write',
   tags: [],
-  httpMethod: 'put',
+  httpMethod: 'patch',
   httpPath: '/ocpi/receiver/2.2/tokens/{countryCode}/{partyID}/{tokenUID}',
-  operationId: 'putClientOwnedToken',
+  operationId: 'patchClientOwnedToken',
 };
 
 export const tool: Tool = {
@@ -29,34 +29,9 @@ export const tool: Tool = {
       tokenUID: {
         type: 'string',
       },
-      contract_id: {
-        type: 'string',
-      },
-      country_code: {
-        type: 'string',
-      },
-      issuer: {
-        type: 'string',
-      },
-      last_updated: {
-        type: 'string',
-      },
-      party_id: {
-        type: 'string',
-      },
-      body_type: {
-        type: 'string',
-        enum: ['AD_HOC_USER', 'APP_USER', 'OTHER', 'RFID'],
-      },
-      uid: {
-        type: 'string',
-      },
-      valid: {
-        type: 'boolean',
-      },
-      whitelist: {
-        type: 'string',
-        enum: ['ALWAYS', 'ALLOWED', 'ALLOWED_OFFLINE', 'NEVER'],
+      body: {
+        type: 'object',
+        additionalProperties: true,
       },
       'OCPI-from-country-code': {
         type: 'string',
@@ -76,40 +51,16 @@ export const tool: Tool = {
       'X-Request-ID': {
         type: 'string',
       },
-      query_type: {
+      type: {
         type: 'string',
         enum: ['AD_HOC_USER', 'APP_USER', 'OTHER', 'RFID'],
-      },
-      default_profile_type: {
-        type: 'string',
-        enum: ['CHEAP', 'FAST', 'GREEN', 'REGULAR'],
-      },
-      energy_contract: {
-        $ref: '#/$defs/energy_contract',
-      },
-      group_id: {
-        type: 'string',
-      },
-      language: {
-        type: 'string',
-      },
-      visual_number: {
-        type: 'string',
       },
     },
     required: [
       'countryCode',
       'partyID',
       'tokenUID',
-      'contract_id',
-      'country_code',
-      'issuer',
-      'last_updated',
-      'party_id',
-      'body_type',
-      'uid',
-      'valid',
-      'whitelist',
+      'body',
       'OCPI-from-country-code',
       'OCPI-from-party-id',
       'OCPI-to-country-code',
@@ -117,24 +68,8 @@ export const tool: Tool = {
       'X-Correlation-ID',
       'X-Request-ID',
     ],
-    $defs: {
-      energy_contract: {
-        type: 'object',
-        properties: {
-          supplier_name: {
-            type: 'string',
-          },
-          contract_id: {
-            type: 'string',
-          },
-        },
-        required: ['supplier_name'],
-      },
-    },
   },
-  annotations: {
-    idempotentHint: true,
-  },
+  annotations: {},
 };
 
 export const handler = async (client: OcpiSDK, args: Record<string, unknown> | undefined) => {

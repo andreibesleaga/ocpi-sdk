@@ -42,18 +42,18 @@ export class Tokens extends APIResource {
     const {
       countryCode,
       partyID,
+      body,
       'OCPI-from-country-code': ocpiFromCountryCode,
       'OCPI-from-party-id': ocpiFromPartyID,
       'OCPI-to-country-code': ocpiToCountryCode,
       'OCPI-to-party-id': ocpiToPartyID,
       'X-Correlation-ID': xCorrelationID,
       'X-Request-ID': xRequestID,
-      query_type,
-      ...body
+      type,
     } = params;
-    return this._client.put(path`/ocpi/receiver/2.2/tokens/${countryCode}/${partyID}/${tokenUid}`, {
-      query: { type: query_type },
-      body,
+    return this._client.patch(path`/ocpi/receiver/2.2/tokens/${countryCode}/${partyID}/${tokenUid}`, {
+      query: { type },
+      body: body,
       ...options,
       headers: buildHeaders([
         {
@@ -169,47 +169,7 @@ export interface TokenUpdateParams {
   /**
    * Body param:
    */
-  contract_id: string;
-
-  /**
-   * Body param:
-   */
-  country_code: string;
-
-  /**
-   * Body param:
-   */
-  issuer: string;
-
-  /**
-   * Body param:
-   */
-  last_updated: string;
-
-  /**
-   * Body param:
-   */
-  party_id: string;
-
-  /**
-   * Body param:
-   */
-  body_type: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
-
-  /**
-   * Body param:
-   */
-  uid: string;
-
-  /**
-   * Body param:
-   */
-  valid: boolean;
-
-  /**
-   * Body param:
-   */
-  whitelist: 'ALWAYS' | 'ALLOWED' | 'ALLOWED_OFFLINE' | 'NEVER';
+  body: { [key: string]: unknown };
 
   /**
    * Header param:
@@ -244,32 +204,7 @@ export interface TokenUpdateParams {
   /**
    * Query param:
    */
-  query_type?: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
-
-  /**
-   * Body param:
-   */
-  default_profile_type?: 'CHEAP' | 'FAST' | 'GREEN' | 'REGULAR';
-
-  /**
-   * Body param:
-   */
-  energy_contract?: EnergyContract;
-
-  /**
-   * Body param:
-   */
-  group_id?: string;
-
-  /**
-   * Body param:
-   */
-  language?: string;
-
-  /**
-   * Body param:
-   */
-  visual_number?: string;
+  type?: 'AD_HOC_USER' | 'APP_USER' | 'OTHER' | 'RFID';
 }
 
 export declare namespace Tokens {
