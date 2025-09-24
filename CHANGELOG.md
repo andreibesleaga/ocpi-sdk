@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.8.0-beta (2025-09-24)
+
+Full Changelog: [v0.7.0-beta...v0.8.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.7.0-beta...v0.8.0-beta)
+
+### Features
+
+* **mcp:** add option for including docs tools ([f87b348](https://github.com/andreibesleaga/ocpi-sdk/commit/f87b348c34819016c51e79556d4138d349b3cd19))
+* **mcp:** enable experimental docs search tool ([042af27](https://github.com/andreibesleaga/ocpi-sdk/commit/042af27ec169425d6909c58ecf7b003e19db4ad4))
+
 ## 0.7.0-beta (2025-09-22)
 
 Full Changelog: [v0.6.0-beta...v0.7.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.6.0-beta...v0.7.0-beta)
