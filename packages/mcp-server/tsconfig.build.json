@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "ocpi-sdk-mcp/*": ["dist/src/*"],
-      "ocpi-sdk-mcp": ["dist/src/index.ts"]
+      "ocpi-sdk-mcp/*": ["./dist/src/*"],
+      "ocpi-sdk-mcp": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

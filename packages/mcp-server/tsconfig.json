@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "ocpi-sdk-mcp/*": ["src/*"],
-      "ocpi-sdk-mcp": ["src/index.ts"]
+      "ocpi-sdk-mcp/*": ["./src/*"],
+      "ocpi-sdk-mcp": ["./src/index.ts"]
     },
     "noEmit": true,
 
