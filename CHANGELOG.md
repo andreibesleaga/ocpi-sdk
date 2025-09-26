@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.8.1-beta (2025-09-26)
+
+Full Changelog: [v0.8.0-beta...v0.8.1-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.8.0-beta...v0.8.1-beta)
+
+### Performance Improvements
+
+* faster formatting ([fbeeeaa](https://github.com/andreibesleaga/ocpi-sdk/commit/fbeeeaa1d8de89d645ab16ea6572f56459dbd68c))
+
+
+### Chores
+
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([6cf507e](https://github.com/andreibesleaga/ocpi-sdk/commit/6cf507e202a43983c97ad588cea8297b492753da))
+
 ## 0.8.0-beta (2025-09-24)
 
 Full Changelog: [v0.7.0-beta...v0.8.0-beta](https://github.com/andreibesleaga/ocpi-sdk/compare/v0.7.0-beta...v0.8.0-beta)
